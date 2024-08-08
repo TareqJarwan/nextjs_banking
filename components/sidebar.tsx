@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Footer from "./footer";
 
 const Sidebar: React.FC<SiderbarProps> = ({
     user
@@ -51,7 +52,7 @@ const Sidebar: React.FC<SiderbarProps> = ({
                             <p className={
                                 cn(
                                     'sidebar-label',
-                                isActive && '!text-white'
+                                    isActive && '!text-white'
                                 )}
                             >
                                 {item.label}
@@ -63,7 +64,7 @@ const Sidebar: React.FC<SiderbarProps> = ({
                 USER
             </nav>
 
-            FOOTER
+            <Footer user={user} />
         </section>
     );
 }
