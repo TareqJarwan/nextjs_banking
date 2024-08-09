@@ -23,8 +23,6 @@ const RecentTransactions = ({
         indexOfFirstTransaction, indexOfLastTransaction
     )
 
-    console.log("tans", transactions)
-
     return (
         <section className="recent-transactions">
             <header className="flex items-center justify-between">
@@ -67,11 +65,16 @@ const RecentTransactions = ({
                             type="full"
                         />
 
-                        <TransactionsTable transactions={currentTransactions} />
+                        <TransactionsTable
+                            transactions={currentTransactions}
+                        />
 
                         {totalPages > 1 && (
                             <div className="my-4 w-full">
-                                <Pagination totalPages={totalPages} page={page} />
+                                <Pagination
+                                    totalPages={totalPages}
+                                    page={page}
+                                />
                             </div>
                         )}
                     </TabsContent>

@@ -1,3 +1,7 @@
+'use client';
+
+import { useEffect, useState } from "react";
+
 import AnimatedCounter from "./animated-counter";
 import DoughnutChart from "./doughnut-chart";
 
@@ -6,6 +10,14 @@ const TotalBalanceBox: React.FC<TotalBalanceBoxProps> = ({
     totalBanks,
     totalCurrentBalance
 }) => {
+    const [domLoaded, setDomLoaded] = useState(false);
+
+    useEffect(() => {
+        setDomLoaded(true);
+    }, []);
+
+    if (!domLoaded) return null;
+
     return (
         <section className="total-balance">
             <div className="total-balance-chart">

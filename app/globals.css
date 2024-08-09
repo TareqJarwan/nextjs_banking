@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+body {
+  height: 100vh;
+}
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
