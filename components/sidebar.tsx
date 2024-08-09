@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Footer from "./footer";
+import PlaidLink from "./plaid-link";
 
 const Sidebar: React.FC<SiderbarProps> = ({
     user
@@ -61,7 +62,8 @@ const Sidebar: React.FC<SiderbarProps> = ({
                         </Link>
                     );
                 })}
-                USER
+                
+                <PlaidLink user={user} variant="ghost" />
             </nav>
 
             <Footer user={user} />

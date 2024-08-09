@@ -221,7 +221,7 @@ declare interface RightSidebarProps {
 }
 
 declare interface SiderbarProps {
-  user: Partial<User>;
+  user: User;
 }
 
 declare interface RecentTransactionsProps {

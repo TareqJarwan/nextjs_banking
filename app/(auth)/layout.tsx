@@ -1,10 +1,17 @@
 import Image from "next/image";
+import { redirect } from "next/navigation";
 
-const AuthLayout = ({
+import { getLoggedInUser } from "@/lib/actions/user.actions";
+
+const AuthLayout = async ({
     children,
 }: Readonly<{
     children: React.ReactNode;
 }>) => {
+    const loggedInUser = await getLoggedInUser();
+
+    if (loggedInUser) redirect('/');
+
     return (
         <main className="flex min-h-screen w-full justify-between font-inter">
             {children}

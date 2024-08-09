@@ -29,8 +29,8 @@ const RootLayout = async ({
                         <MobileNavbar user={loggedIn} />
                     </div>
                 </div>
+                {children}
             </div>
-            {children}
         </main>
     );
 };
